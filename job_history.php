@@ -62,7 +62,7 @@
         <?php
           @include 'db_conn.php';
 
-          // Check if the 'id' parameter is set in the URL
+
           if (isset($_GET['id'])) {
               $employeeId = $_GET['id'];
 

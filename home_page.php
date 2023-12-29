@@ -73,10 +73,10 @@
 
 
 <script>
-  // Function to fetch data from the server
+
   async function fetchData() {
       try {
-          const response = await fetch('data.php'); // Adjust the path if necessary
+          const response = await fetch('data.php'); 
           const data = await response.json();
 
           return data;
@@ -86,7 +86,7 @@
       }
   }
 
-  // Function to update the chart with the fetched data
+
   async function updateChart() {
       const data = await fetchData();
 
@@ -115,7 +115,7 @@
       }
   }
 
-  // Call the updateChart function when the page loads
+
   window.onload = updateChart;
 </script>
 </body>
