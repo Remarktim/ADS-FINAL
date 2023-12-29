@@ -52,6 +52,7 @@
         <thead>
           <tr>
             <th scope="col">JOB</th>
+            <th scope="col">DEPARTMENT</th>
             <th scope="col">JOB START</th>
             <th scope="col">JOB END</th>
             <th scope="col">REASON</th>
@@ -65,9 +66,10 @@
           if (isset($_GET['id'])) {
               $employeeId = $_GET['id'];
 
-              $sql = "SELECT job_positions.job_category, job_service.job_start_date, job_service.job_end_date, job_service.end_reason 
+              $sql = "SELECT job_positions.job_category, job_service.job_start_date, job_service.job_end_date, job_service.end_reason, departments.dept_name
                       FROM job_service
                       JOIN job_positions ON job_service.job_positions_idjob_positions = job_positions.idjob_positions
+                      JOIN departments ON job_service.departments_iddepartments = departments.iddepartments
                       WHERE job_service.employees_idemployees = $employeeId";
 
               $result = $conn->query($sql);
@@ -76,9 +78,11 @@
                   while ($row = $result->fetch_assoc()) {
                       echo "<tr>
                               <td>" . $row['job_category'] . "</td>
+                              <td>" . $row['dept_name'] . "</td>
                               <td>" . $row['job_start_date'] . "</td>
                               <td>" . $row['job_end_date'] . "</td>
                               <td class='text-capitalize'>" . $row['end_reason'] . "</td>
+                              
                             </tr>";
                   }
               }

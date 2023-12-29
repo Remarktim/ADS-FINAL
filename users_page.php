@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>users</title>
+    <title>Employees</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -42,10 +42,10 @@
     <header class="p-3">
       <ul class="nav">
         <li class="mx-2">
-          <a class="btn" aria-current="page" href="home.html">Home</a>
+          <a class="btn" aria-current="page" href="home_page.php">Home</a>
         </li>
         <li class="mx-2">
-          <a class="btn active" href="users_page.html">Employees</a>
+          <a class="btn active" href="users_page.php">Employees</a>
         </li>
       </ul>
     </header>
